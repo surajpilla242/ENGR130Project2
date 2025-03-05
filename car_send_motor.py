@@ -5,7 +5,7 @@
 from microbit import *
 import radio
 
-chnl = xx #change the channel to your team number
+chnl = 03 #change the channel to your team number
 radio.config(channel=chnl)
 radio.on()
 
