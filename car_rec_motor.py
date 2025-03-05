@@ -7,7 +7,7 @@ M1B = 0x2
 M2A = 0x3
 M2B = 0x4
 
-chnl = XX   #define channel to your team number
+chnl = 03   #define channel to your team number
 
 r.setup()
 
