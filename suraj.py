@@ -1,4 +1,17 @@
-def 
+def conversion()
+{
+  with open('test.txt', 'r') as file:
+    lines = [line.strip() for line in file.readlines()]
+}
+
+def waveFrontSearch(lines)
+{
+  for i in range(6)
+    for j in range(9)
+      if lines[i][j] == 'G'
+        x_goal = i
+        y_goal = j
+}
 
 
 // FUNCTION wavefront algorithm to find most efficient path to goal
