@@ -25,7 +25,12 @@ def turnLeft90():
     r.motor(M1A, countsToTravel)
     r.motor(M2B, 50)
     r.motor(M1A, -50)
-
+    while(r.motor.status(M2B) < countsToTravel and r.motor.status(M1A) < countsToTravel)
+    {
+        r.motor(M2B, 50)
+        r.motor(M1A, -50)
+    }
+    
 #stop for half second at end of movement
     r.motor(M2B, 0)
     r.motor(M1A, 0)
