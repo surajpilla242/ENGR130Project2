@@ -31,4 +31,18 @@ def turnLeft90():
     r.motor(M1A, 0)
     sleep(500)
 
-
+def turn_right_90():
+    #wheel_travel_distance = 8.6 
+    #wheel_circumference = 19.5  
+    countsToTravel = ((8.6/17.6)/19.5)*(360)
+    
+    r.motor(M2B, 0)
+    r.motor(M1A, 0)
+    r.motor(M2B, countsToTravel)
+    r.motor(M1A, countsToTravel)
+    r.motor(M2B, -50) 
+    r.motor(M1A, 50)   
+   
+    r.motor(M2B, 0)
+    r.motor(M1A, 0)
+    sleep(500)
