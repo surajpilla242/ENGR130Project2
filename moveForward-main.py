@@ -1,7 +1,7 @@
 from microbit import *
 import radio
 import robotbit_library as r
-def move_forward:
+def move_forward():
     r.setup()
 # Define Ports for the bank of high current output
 # port definitions.
