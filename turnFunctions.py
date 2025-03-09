@@ -10,19 +10,19 @@ r.setup()
 
 #left 90 turn function
 def turnLeft90():
-    r.motor(M1A,100) #right motor
-    r.motor(M2B,100) #left motor
-    sleep(250) #duration of turn (0.25 sec)
-    r.motor(M1A,0) #stop right motor
-    r.motor(M2B,0) #stop left motor
+    powerSetting = [100,0]    # list of power settings, in pct, to cycle through
+    for pwr_sig in powerSetting:
+        r.motor(M1A, pwr_sig)
+        r.motor(M2B, pwr_sig)
+        time.sleep(250) 
 
 #right 90 turn function
 def turnRight90():
-    r.motor(M1A,-100) #right motor
-    r.motor(M2B,-100) #left motor
-    sleep(250) #duration of turn (0.25 sec)
-    r.motor(M1A,0) #stop right motor
-    r.motor(M2B,0) #stop left motor
+   powerSetting = [-100,0]    # list of power settings, in pct, to cycle through
+    for pwr_sig in powerSetting:
+        r.motor(M1A, pwr_sig)
+        r.motor(M2B, pwr_sig)
+        time.sleep(250) 
 
 turnLeft90()
 sleep(5000) #pause for 5 seconds 
