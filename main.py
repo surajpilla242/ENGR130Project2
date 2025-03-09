@@ -26,13 +26,6 @@ grid_map = [
     [0,0,0,0,0]
 ]
 
-
-TIME_OUT = 100000  # Increase time out to see farther, but
-# this will reduce the sample rate
-ECHO = pin1  # ping sensor uses a single pin for ECHO and Trigger
-TRIGGER = pin1
-
-
 #left 90 turn function
 def turnLeft90():
     r.motor(M1A,100) #right motor
