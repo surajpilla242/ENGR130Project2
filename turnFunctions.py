@@ -9,7 +9,7 @@ M2B = 0x4
 r.setup()     
 
 #left 90 turn function
-def turnLeft90():
+def turnRight90():
     powerSetting = [100,0]    # list of power settings, in pct, to cycle through
     for pwr_sig in powerSetting:
         r.motor(M1A, pwr_sig)
@@ -17,9 +17,9 @@ def turnLeft90():
         sleep(250) 
 
 #right 90 turn function
-def turnRight90():
+def turnLeft90():
    powerSetting = [-100,0]    # list of power settings, in pct, to cycle through
-    for pwr_sig in powerSetting:
+   for pwr_sig in powerSetting:
         r.motor(M1A, pwr_sig)
         r.motor(M2B, pwr_sig)
         sleep(250) 
