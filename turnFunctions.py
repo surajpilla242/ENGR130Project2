@@ -14,7 +14,7 @@ def turnLeft90():
     for pwr_sig in powerSetting:
         r.motor(M1A, pwr_sig)
         r.motor(M2B, pwr_sig)
-        time.sleep(250) 
+        sleep(250) 
 
 #right 90 turn function
 def turnRight90():
@@ -22,7 +22,7 @@ def turnRight90():
     for pwr_sig in powerSetting:
         r.motor(M1A, pwr_sig)
         r.motor(M2B, pwr_sig)
-        time.sleep(250) 
+        sleep(250) 
 
 turnLeft90()
 sleep(5000) #pause for 5 seconds 
