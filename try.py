@@ -48,7 +48,7 @@ def moveForward(numBlocks):
        
 
 def wavefrontSearch():
-    
+    print("wfs")
     start_x, start_y = None, None
     for x in range(x_size):
         for y in range(y_size):
@@ -79,6 +79,7 @@ def wavefrontSearch():
         grid_map[start_x][start_y] = 99
 
 def navigateToGoal():
+    print("ntg star")
     robot_pos = None
     for x in range(x_size):
         for y in range(y_size):
