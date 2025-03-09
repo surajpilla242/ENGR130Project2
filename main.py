@@ -43,13 +43,13 @@ def turnRight90():
     r.motor(M2B,0) #stop left motor
 
 #forward function
-def moveForward(numBlocks):
-    r.motor(M1A,-1*35) #right motor
-    r.motor(M2B,1.1*35) #left motor
-    duration = (25/(6.5*math.pi)) * 360 * numBlocks #calc sleep duration
-    sleep(3*duration)
-    r.motor(M1A,0) #stop right motor
-    r.motor(M2B,0) #stop left motor
+def move_forward():    
+    powerSetting = [35,0]    # list of power settings, in pct, to cycle through
+    for pwr_sig in powerSetting:
+        r.motor(M1A,-1*pwr_sig)
+        r.motor(M2B,1.1*pwr_sig)
+        print("Power signal = {}".format(pwr_sig))
+        sleep(1600) 
 
 """ with open('test.txt', 'r') as file:
   lines = [line.strip() for line in file.readlines()]
