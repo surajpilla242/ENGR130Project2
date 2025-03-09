@@ -11,6 +11,22 @@ M2B = 0x4  # Left motor
 # Sets up the robotbit
 r.setup()
 
+x_size = 10
+y_size = 5
+grid_map = [
+    [0,0,0,0,0],
+    [0,1,99,1,0],
+    [0,1,1,1,0],
+    [0,0,0,0,0],
+    [0,0,0,0,0],
+    [0,0,0,0,0],
+    [0,0,0,0,0],
+    [0,0,2,0,0],
+    [0,0,0,0,0],
+    [0,0,0,0,0]
+]
+
+
 TIME_OUT = 100000  # Increase time out to see farther, but
 # this will reduce the sample rate
 ECHO = pin1  # ping sensor uses a single pin for ECHO and Trigger
