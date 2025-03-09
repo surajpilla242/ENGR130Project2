@@ -4,7 +4,20 @@ import car_rec_motor
 import car_send_motor
 import ultrasonic_Grove
 
+# Port definitions
+M1A = 0x1  # Right motor
+M2B = 0x4  # Left motor
 
+# Sets up the robotbit
+r.setup()
+
+TIME_OUT = 100000  # Increase time out to see farther, but
+# this will reduce the sample rate
+ECHO = pin1  # ping sensor uses a single pin for ECHO and Trigger
+TRIGGER = pin1
+
+
+#left 90 turn function
 def turnLeft90():
     r.motor(M1A,100) #right motor
     r.motor(M2B,100) #left motor
@@ -43,14 +56,6 @@ def distance(tp, ep):
         ts = ts * 17 // 100  # if system did not timeout, then send
         # back a scaled value
     return ts  # Return timeout error as a negative number (-1)
-
-
-# Port definitions
-M1A = 0x1  # Right motor
-M2B = 0x4  # Left motor
-
-# Sets up the robotbit
-r.setup()
 
 
 with open('test.txt', 'r') as file:
