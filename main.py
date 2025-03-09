@@ -27,20 +27,20 @@ grid_map = [
 ]
 
 #left 90 turn function
-def turnLeft90():
-    r.motor(M1A,100) #right motor
-    r.motor(M2B,100) #left motor
-    sleep(250) #duration of turn (0.25 sec)
-    r.motor(M1A,0) #stop right motor
-    r.motor(M2B,0) #stop left motor
+def turnRight90():
+    powerSetting = [100,0]    # list of power settings, in pct, to cycle through
+    for pwr_sig in powerSetting:
+        r.motor(M1A, pwr_sig)
+        r.motor(M2B, pwr_sig)
+        sleep(250) 
 
 #right 90 turn function
-def turnRight90():
-    r.motor(M1A,-100) #right motor
-    r.motor(M2B,-100) #left motor
-    sleep(250) #duration of turn (0.25 sec)
-    r.motor(M1A,0) #stop right motor
-    r.motor(M2B,0) #stop left motor
+def turnLeft90():
+   powerSetting = [-100,0]    # list of power settings, in pct, to cycle through
+   for pwr_sig in powerSetting:
+        r.motor(M1A, pwr_sig)
+        r.motor(M2B, pwr_sig)
+        sleep(250) 
 
 #forward function
 def move_forward():    
